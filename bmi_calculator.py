@@ -1,23 +1,24 @@
-name = input("Enter your name: ")
+name = input("Enter your first name: ")
 
-weight = int(input("Enter your weight in kg: "))
+weight = float(input("Enter your weight in kilograms (kg): "))
 
-height = int(input("Enter your height in cm: "))
+height = float(input("Enter your height in centimetres (cm): "))
 
-BMI = (weight/height/height * 10000)
+BMI = round((weight/height/height * 10000), 2)
 
-print(name + ", you're BMI is " + str(BMI))
+print("Hello " + name + ",")
+print("Your BMI is " + str(BMI))
 
 if BMI>0:
     if(BMI<18.5):
-        print("You are underweight")
+        print("Underweight")
     elif(BMI<=24.9):
-        print("You are at a normal weight")
+        print("Normal weight")
     elif(BMI<=29.9):
-        print("You are overweight")
+        print("Overweight")
     elif(BMI<=34.9):
-        print("You are obese")
+        print("Obese")
     elif(BMI<=39.9):
-        print("You are serverely obese")
+        print("Serverely obese")
     else:
-        print("You are morbidly obese")
+        print("Morbidly obese")
